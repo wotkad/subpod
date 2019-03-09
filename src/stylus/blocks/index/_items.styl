@@ -1,0 +1,123 @@
+.items
+	display flex
+	flex-wrap wrap
+	padding 60px 0
+	&__block
+		padding 30px
+		opacity 0
+		transition .5s
+		&:nth-child(1)
+			flex-basis 66.66667%
+			box-shadow 0px 4px 50px rgba(0, 0, 0, 0.1)
+			position relative
+			border-top 5px solid #359EF1
+			border-bottom 5px solid rgba(53, 158, 241, 0.1)
+			&:after
+				content ''
+				position absolute
+				background-image: linear-gradient(#359EF1, rgba(53, 158, 241, 0.1))
+				top -5px
+				bottom 0
+				width 5px
+				right 0
+			&:before
+				content ''
+				position absolute
+				background-image: linear-gradient(#359EF1, rgba(53, 158, 241, 0.1))
+				top -5px
+				bottom 0
+				width 5px
+				left 0
+			& > div:nth-child(1) > div:nth-child(2)
+				flex-basis 65%
+		&:nth-child(2)
+			flex-basis 33.33334%
+			& > div:nth-child(1) > div:nth-child(2)
+				flex-basis 90%
+		&:nth-child(3)
+			flex-basis 33.33334%
+			& > div:nth-child(1) > div:nth-child(2)
+				flex-basis 90%
+		&:nth-child(4)
+			flex-basis 33.33334%
+			& > div:nth-child(1) > div:nth-child(2)
+				flex-basis 90%
+		&:nth-child(5)
+			flex-basis 33.33334%
+			& > div:nth-child(1) > div:nth-child(2)
+				flex-basis 90%
+		&-content
+			display flex
+			flex-basis 100%
+			margin-bottom 15px
+			&-number
+				flex-basis 10%
+				padding-right 10px
+				display flex
+				align-items center
+				justify-content center
+			&-title
+				font-size 1.125rem
+				line-height 26px
+				font-family $SemiBold
+				color $black
+				display flex
+				p
+					flex-basis 50%
+			&-button
+				flex-basis 30%
+				border-radius 5px
+				background-color $blue
+				padding 16px
+				text-align center
+				height 50px
+				color $white
+				text-transform uppercase
+				font-size 0.75rem
+				line-height 18px
+				font-family $ExtraBold
+				box-shadow 0px 10px 15px rgba(0, 0, 0, 0.15)
+				transition .3s
+				&:hover
+					box-shadow 0px 0px 20px $blue
+				& span
+					margin-left 5px
+		&-text
+			font-family $Regular
+			font-size 0.825rem
+			line-height 21px
+			color $text
+			padding-left 45px
+@media(max-width: 991px)
+	.items
+		padding 40px 0 10px 0
+		&__block
+			&:nth-child(1)
+				flex-basis 100%
+				margin-bottom 30px
+				& > div:nth-child(1)
+					flex-wrap wrap
+					& > div:nth-child(2)
+						flex-basis 80%
+						margin-bottom 15px
+				& > div:nth-child(1)
+					& > div:nth-child(1)
+						padding-right 25px
+			&-content
+				&-title
+					flex-basis 80%
+					p
+						flex-basis 100%
+				&-button
+					padding 16px 38px
+					flex-basis auto
+					text-align center
+					margin-left 45px
+			&:nth-child(2)
+				flex-basis 100%
+			&:nth-child(3)
+				flex-basis 100%
+			&:nth-child(4)
+				flex-basis 100%
+			&:nth-child(5)
+				flex-basis 100%

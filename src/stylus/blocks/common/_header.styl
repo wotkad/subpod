@@ -1,0 +1,121 @@
+#header
+	overflow visible
+.header
+	position absolute
+	display flex
+	z-index 10
+	width calc(100% - 30px)
+	margin-top 50px
+	align-items center
+	&__logo
+		font-family $ExtraBold
+		font-size 2.625rem
+		line-height 62px
+		color $white
+		flex-basis 10%
+		margin-right 5%
+		opacity 0
+		transform translateX(-20px)
+	&__items
+		z-index 110
+		display flex
+		&-item
+			font-size 0.75rem
+			line-height 18px
+			font-family $ExtraBold
+			letter-spacing 1px
+			text-transform uppercase
+			overflow .8
+			color $white
+			padding-bottom 3px
+			border-bottom 1px solid rgba(255, 255, 255, 0.3)
+			margin-left 25px
+			opacity 0
+			transform translateY(-20px)
+			transition .3s
+			&:hover
+				border-color $orange
+	&__block
+		position absolute
+		right 0
+		opacity 0
+		z-index 110
+		transform translateX(20px)
+		&-button
+			border-radius 5px
+			background-color $blue
+			padding 16px 38px
+			color $white
+			text-transform uppercase
+			font-size 0.75rem
+			line-height 18px
+			font-family $ExtraBold
+			box-shadow 0px 10px 15px rgba(0, 0, 0, 0.15)
+			transition .3s
+			&:hover
+				box-shadow 0px 0px 20px $blue
+			& span
+				margin-left 5px
+.headermob
+	display none
+	&__items
+		transform matrix(1, 0, 0, 1, 0, -209)
+@media(max-width: 991px)
+	.header
+		display none
+	.headermob
+		display flex
+		justify-content space-between
+		align-items center
+		position absolute
+		width calc(100% - 30px)
+		z-index 11
+		&__items
+			position relative
+			background-color $white
+			padding 20px
+			position fixed
+			width 100%
+			left 0
+			top 0
+			display flex
+			z-index 10
+			flex-wrap wrap
+			&-active
+				transform translateY(0)
+			&-item
+				font-family $SemiBold
+				color $black
+				font-size 2.2rem
+				line-height 40px
+				flex-basis 100%
+				margin-bottom 20px
+				text-align center
+				padding-bottom 3px
+				&:last-child
+					margin-bottom 0
+				& a
+					transition .3s
+					border-bottom 3px solid $blue
+					&:hover
+						color $blue
+			&-close
+				position absolute
+				right 15px
+				font-size 20px
+				cursor pointer
+				top 15px
+		&__menu
+			& i
+				color $white
+				font-size 32px
+				cursor pointer
+		&__logo
+			font-family $ExtraBold
+			font-size 2.625rem
+			line-height 62px
+			color $white
+		&__button
+			& i
+				color $white
+				font-size 32px

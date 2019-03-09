@@ -1,0 +1,132 @@
+#about
+	background-color #F8F8F8
+.about-bg
+	position absolute
+	right -15%
+	top 0
+.about
+	padding 80px 0
+	display flex
+	flex-wrap wrap
+	justify-content space-between
+	&__titles
+		flex-basis 100%
+		align-items center
+		display flex
+		transform translateY(20px)
+		opacity 0
+		&-title
+			margin-bottom 30px
+			flex-basis 50%
+			& p
+				font-family $SemiBold
+				font-size 1.5rem
+				line-height 35px
+				color $text
+				display inline-block
+				&:nth-child(3)
+					margin-left 3px
+			& span
+				font-family $SemiBold
+				font-size 1.5rem
+				line-height 35px
+				color $blue
+				margin-left 3px
+		&-desc
+			align-self flex-start
+			flex-basis 50%
+			font-family $Regular
+			font-size 1.125rem
+			line-height 26px
+			color #9c9c9c
+			text-align right
+	&__block
+		transform translateY(20px)
+		opacity 0
+		&:nth-child(2)
+			flex-basis 45%
+			margin-bottom 40px
+		&:nth-child(3)
+			flex-basis 45%
+			margin-bottom 40px
+		&:nth-child(4)
+			flex-basis 100%
+			display flex
+			box-shadow 0px 4px 50px rgba(0, 0, 0, 0.1)
+			& > div:nth-child(1)
+				padding 30px 40px
+				flex-basis 75%
+				background-color $white
+				& a
+					color $blue
+					font-family $SemiBold
+					margin 0 3px
+				& p
+					display inline
+		&-image
+			flex-basis 25%
+			background $gradient
+			display flex
+			align-items center
+			justify-content center
+			opacity 0
+			transform translateX(20px)
+			transition .3s
+			&:hover
+				box-shadow 0px 0px 20px #0B6AB6
+			&-telegram
+				display flex
+				align-items center
+				justify-content center
+				color $white
+				flex-direction column
+				& i
+					font-size 75px
+					margin-bottom 20px
+			&-link
+				color $white
+				padding-bottom 2px
+				font-family $SemiBold
+				font-size 1.125rem
+				line-height 26px
+				border-bottom 1px solid rgba(255, 255, 255, 0.3)
+		&-text
+			font-family $Regular
+			font-size 1.125rem
+			line-height 26px
+			color $text
+		& p
+			margin-bottom 10px
+			display inline-block
+		& span
+			margin 0 3px
+		.nm
+			margin 0
+@media(max-width: 991px)
+	.about-bg
+		display none
+	.about
+		padding 40px 0
+		&__titles
+			flex-wrap wrap
+			&-title
+				flex-basis 100%
+				margin-bottom 15px
+				order 2
+			&-desc
+				flex-basis 50%
+				text-align left
+				order 1
+				margin-bottom 15px
+		&__block
+			&:nth-child(2)
+				flex-basis 100%
+			&:nth-child(3)
+				flex-basis 100%
+			&:nth-child(4)
+				flex-wrap wrap
+				& > div:nth-child(1)
+					flex-basis 100%
+			&-image
+				flex-basis 100%
+				padding 30px 0
